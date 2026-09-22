@@ -1,11 +1,14 @@
 from dataclasses import dataclass
+import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 @dataclass(frozen=True)
 class BrowserConfig:
-    debug: bool = False
-
+    debug: bool = os.getenv('BROWSER_DEBUG', 'False').lower() == 'true'
     
     @property
     def headless(self) -> bool:
