@@ -30,6 +30,8 @@ class TestTable(BasePage):
 
             self.page.locator(self.locator_test_table).click()
 
+            # self.page.locator(self.locator_test_table).nth()
+
             logger.info('Página Test Table localizada ✅')
 
         except Exception as e:

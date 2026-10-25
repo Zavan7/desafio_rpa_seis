@@ -42,6 +42,9 @@ def main() -> None:
 
     except Exception as e:
         print(e)
+        # O Maestro decide o status pelo código de saída: sem isto, a
+        # falha sairia com 0 e seria marcada como sucesso.
+        raise SystemExit(1) from e
 
 
 if __name__ == '__main__':

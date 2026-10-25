@@ -49,6 +49,6 @@ class InitialPage(BasePage):
 
         except Exception as e:
             
-            logger.error('Falha ao abrir o link ❌')
+            logger.exception('Falha ao abrir o link ❌')
             logger.error('Error: ', e)
             raise
